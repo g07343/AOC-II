@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C558F744-9AEA-44A4-8276-FBF5B2FA321A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>baseProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EA2F88D8-354C-4FD3-90C9-47971A2EDE03</key>
+		<string>https://github.com/g07343/AOC-II.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Week 1/baseProject/baseProject.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EA2F88D8-354C-4FD3-90C9-47971A2EDE03</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/g07343/AOC-II.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EA2F88D8-354C-4FD3-90C9-47971A2EDE03</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EA2F88D8-354C-4FD3-90C9-47971A2EDE03</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AOC-II</string>
+		</dict>
+	</array>
+</dict>
+</plist>
