@@ -23,16 +23,16 @@
     //set unique attribute through internal method
     [AttackRobot setHealthBonus:25];
     NSString *attackName = [AttackRobot calculateHitPoints];
-    NSString *healthBonus = [NSString stringWithFormat:@"Health Bonus is %i", [AttackRobot healthBonus]];
+    NSString *healthBonus = [NSString stringWithFormat:@"%@'s Health Bonus is %i", [AttackRobot name],[AttackRobot healthBonus]];
     NSLog(@"%@",attackName);
     NSLog(@"%@", healthBonus);
     
     //create a repair robot and set it's unique 'shield' property
     repairRobot *RepairRobot = (repairRobot*)[robotFactory createNewRobot:2];
     //set unique attribute through internal method
-    [RepairRobot setShield:12];
+    [RepairRobot setShield:18];
     NSString *repairName = [RepairRobot calculateHitPoints];
-    NSString *shieldBonus = [NSString stringWithFormat:@"Shield bonus is %i", [RepairRobot shield]];
+    NSString *shieldBonus = [NSString stringWithFormat:@"%@'s Shield bonus is %i", [RepairRobot name], [RepairRobot shield]];
     NSLog(@"%@",repairName);
     NSLog(@"%@", shieldBonus);
     
@@ -41,7 +41,7 @@
     //set unique attribute through internal method
     [ScoutRobot setArmorPenalty:4];
     NSString *scoutName = [ScoutRobot calculateHitPoints];
-    NSString *armorPenalty = [NSString stringWithFormat:@"Armor penalty is %i", [ScoutRobot armorPenalty]];
+    NSString *armorPenalty = [NSString stringWithFormat:@"%@'s Armor penalty is %i", [ScoutRobot name], [ScoutRobot armorPenalty]];
     NSLog(@"%@", scoutName);
     NSLog(@"%@", armorPenalty);
 }
