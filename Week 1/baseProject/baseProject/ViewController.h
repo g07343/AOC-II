@@ -10,5 +10,12 @@
 #import "robotFactory.h"
 
 @interface ViewController : UIViewController
-
+{//declare labels
+    UILabel *attackLabel;
+    UILabel *attackCustom;
+    UILabel *repairLabel;
+    UILabel *repairCustom;
+    UILabel *scoutLabel;
+    UILabel *scoutCustom;
+}
 @end
