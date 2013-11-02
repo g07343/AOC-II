@@ -12,10 +12,10 @@
 @synthesize shield;
 
 -(id)init
-{
+{//init repairRobot class
     self = [super init];
     if (self != nil)
-    {
+    {//override defaults from base class and assign a value to unique data
         [self setHitPoints:20];
         [self setName:@"Repair Robot"];
         [self setShield:15];
@@ -23,7 +23,7 @@
     }
     return self;
 }
-
+//override function inherited from base class to utilize unique class-specific data
 -(NSString*)calculateHitPoints
 {
     [self setHitPoints:(self.hitPoints * shield)];

@@ -17,7 +17,7 @@ typedef enum {
     RepairBot,
     ScoutBot
 } robotEnum;
-
+//define for getter/setter
 @property NSString *name;
 @property int hitPoints;
 

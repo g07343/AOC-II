@@ -11,12 +11,12 @@
 @implementation attackRobot
 
 @synthesize healthBonus;
-
+//init attackRobot class
 -(id)init
 {
     self = [super init];
     if (self != nil)
-    {
+    {//override defaults from base class and assign a value to unique data
         [self setHitPoints:40];
         [self setName:@"Attack Robot"];
         [self setHealthBonus:2];

@@ -11,18 +11,18 @@
 @implementation baseRobot
 
 @synthesize hitPoints, name;
-
+//init base class
 -(id)init
 {
     self = [super init];
     if (self != nil)
-    {
+    {//set defaults, in this case nothing (want to set in children classes)
         [self setHitPoints:0];
         [self setName:nil];
     }
     return self;
 }
-
+//create base method
 -(NSString*)calculateHitPoints
 {   //need to change this to an actual calculation at some point...
     NSLog(@"Current baseRobot hitPoints are %i", hitPoints);

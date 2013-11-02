@@ -12,7 +12,7 @@
 @synthesize armorPenalty;
 
 -(id)init
-{
+{//init scoutRobot class
     self = [super init];
     if (self != nil)
     {
@@ -23,7 +23,7 @@
     }
     return self;
 }
-
+//override function from base class to utilize class specific data
 -(NSString*)calculateHitPoints
 {
     [self setHitPoints:(self.hitPoints - armorPenalty)];
