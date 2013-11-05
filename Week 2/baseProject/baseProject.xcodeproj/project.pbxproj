@@ -26,6 +26,8 @@
 		C9D14C5D1822064A005A2F9C /* attackRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D14C5C1822064A005A2F9C /* attackRobot.m */; };
 		C9D14C601822065A005A2F9C /* repairRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D14C5F1822065A005A2F9C /* repairRobot.m */; };
 		C9D14C6318220668005A2F9C /* scoutRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D14C6218220668005A2F9C /* scoutRobot.m */; };
+		C9D419EE182981060019AC06 /* infoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D419ED182981060019AC06 /* infoView.xib */; };
+		C9D419F1182984570019AC06 /* infoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D419F0182984570019AC06 /* infoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,9 @@
 		C9D14C5F1822065A005A2F9C /* repairRobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = repairRobot.m; sourceTree = "<group>"; };
 		C9D14C6118220668005A2F9C /* scoutRobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoutRobot.h; sourceTree = "<group>"; };
 		C9D14C6218220668005A2F9C /* scoutRobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoutRobot.m; sourceTree = "<group>"; };
+		C9D419ED182981060019AC06 /* infoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = infoView.xib; sourceTree = "<group>"; };
+		C9D419EF182984570019AC06 /* infoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infoViewController.h; sourceTree = "<group>"; };
+		C9D419F0182984570019AC06 /* infoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,9 @@
 				A21C4CF217D7878600C6C3BB /* ViewController.h */,
 				A21C4CF317D7878600C6C3BB /* ViewController.m */,
 				A21C4CF517D7878600C6C3BB /* ViewController.xib */,
+				C9D419ED182981060019AC06 /* infoView.xib */,
+				C9D419EF182984570019AC06 /* infoViewController.h */,
+				C9D419F0182984570019AC06 /* infoViewController.m */,
 				A21C4CE117D7878600C6C3BB /* Supporting Files */,
 			);
 			path = baseProject;
@@ -192,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9D419EE182981060019AC06 /* infoView.xib in Resources */,
 				C9A58E551828D5050095E342 /* repairBot_cropped.jpg in Resources */,
 				A21C4CE517D7878600C6C3BB /* InfoPlist.strings in Resources */,
 				C9A58E541828D5050095E342 /* attackBot_cropped.jpg in Resources */,
@@ -212,6 +221,7 @@
 			files = (
 				C9D14C5D1822064A005A2F9C /* attackRobot.m in Sources */,
 				A21C4CE717D7878600C6C3BB /* main.m in Sources */,
+				C9D419F1182984570019AC06 /* infoViewController.m in Sources */,
 				A21C4CEB17D7878600C6C3BB /* AppDelegate.m in Sources */,
 				C9D14C6318220668005A2F9C /* scoutRobot.m in Sources */,
 				A21C4CF417D7878600C6C3BB /* ViewController.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "infoViewController.h"
 
 @interface ViewController ()
 
@@ -177,6 +178,14 @@
             }
             calculateButton.enabled = NO;
         }
+        else if (button.tag == 4)
+        {//4th tag is info button so init new view
+            infoViewController *infoView = [[infoViewController alloc] initWithNibName:@"infoView" bundle:nil];
+            if (infoView != nil)
+            {//display infoView
+                [self presentModalViewController:infoView animated:TRUE];
+            }
+        }
     }
 }
 
@@ -199,6 +208,10 @@
                 
             case 2:
                 [self.view setBackgroundColor: [UIColor colorWithRed:0.867 green:0.576 blue:0.255 alpha:1]];
+                break;
+                
+            case 3:
+                [self.view setBackgroundColor: [UIColor whiteColor]];
                 break;
                 
             default:

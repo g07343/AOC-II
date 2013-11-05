@@ -20,6 +20,7 @@
     IBOutlet UIButton *repairButton;
     IBOutlet UIButton *scoutButton;
     IBOutlet UIButton *calculateButton;
+    IBOutlet UIButton *infoButton;
     int numRobots;
     NSString *currentRobot;
     
