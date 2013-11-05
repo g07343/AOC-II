@@ -11,11 +11,21 @@
 
 @interface ViewController : UIViewController
 {//declare labels
-    UILabel *attackLabel;
-    UILabel *attackCustom;
-    UILabel *repairLabel;
-    UILabel *repairCustom;
-    UILabel *scoutLabel;
-    UILabel *scoutCustom;
+    UILabel *appBanner;
+    UILabel *displayHelper;
+    UILabel *quantityLabel;
+    IBOutlet UIStepper *stepControl;
+    IBOutlet UITextField *outputField;
+    IBOutlet UIButton *attackButton;
+    IBOutlet UIButton *repairButton;
+    IBOutlet UIButton *scoutButton;
+    IBOutlet UIButton *calculateButton;
+    int numRobots;
+    NSString *currentRobot;
+    
 }
+
+-(IBAction)onChange:(id)sender;
+-(IBAction)onClick:(id)sender;
+
 @end
