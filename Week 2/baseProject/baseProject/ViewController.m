@@ -98,7 +98,7 @@
     if (button != nil)
     {
         if (button.tag == 0)
-        {//manually reset values to minimum everytime a new robot is selected
+        {//manually reset values to minimum everytime a new robot is selected (in case user was messing with stepControl before)
             numRobots = 1;
             displayHelper.text = @"Robot to be created:";
             stepControl.value = 1;
@@ -176,6 +176,33 @@
                 outputField.text = scoutText;
             }
             calculateButton.enabled = NO;
+        }
+    }
+}
+
+-(IBAction)segmentClicked:(id)sender
+{//instantiate segmentedControl to capture button presses
+    UISegmentedControl *segmentControl = (UISegmentedControl*)sender;
+    if (segmentControl != nil)
+    {
+        int selected = segmentControl.selectedSegmentIndex;
+        //try a switch instead of several if statements to check currently selected button
+        switch (selected) {
+            case 0:
+                //this color is the default (hooray for color pickers!)
+                [self.view setBackgroundColor: [UIColor colorWithRed:0.749 green:0.749 blue:0.749 alpha:1]];
+                break;
+                
+            case 1:
+                [self.view setBackgroundColor: [UIColor yellowColor]];
+                break;
+                
+            case 2:
+                [self.view setBackgroundColor: [UIColor colorWithRed:0.867 green:0.576 blue:0.255 alpha:1]];
+                break;
+                
+            default:
+                break;
         }
     }
 }

@@ -27,5 +27,6 @@
 
 -(IBAction)onChange:(id)sender;
 -(IBAction)onClick:(id)sender;
+-(IBAction)segmentClicked:(id)sender;
 
 @end
