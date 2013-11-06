@@ -18,6 +18,7 @@
 		A21C4CF117D7878600C6C3BB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A21C4CF017D7878600C6C3BB /* Default-568h@2x.png */; };
 		A21C4CF417D7878600C6C3BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A21C4CF317D7878600C6C3BB /* ViewController.m */; };
 		A21C4CF717D7878600C6C3BB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A21C4CF517D7878600C6C3BB /* ViewController.xib */; };
+		C935F1EF182A2881003256D1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C935F1EE182A2881003256D1 /* MessageUI.framework */; };
 		C9A58E541828D5050095E342 /* attackBot_cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9A58E511828D5050095E342 /* attackBot_cropped.jpg */; };
 		C9A58E551828D5050095E342 /* repairBot_cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9A58E521828D5050095E342 /* repairBot_cropped.jpg */; };
 		C9A58E561828D5050095E342 /* scout_robot.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A58E531828D5050095E342 /* scout_robot.png */; };
@@ -47,6 +48,7 @@
 		A21C4CF217D7878600C6C3BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A21C4CF317D7878600C6C3BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A21C4CF617D7878600C6C3BB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		C935F1EE182A2881003256D1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C9A58E511828D5050095E342 /* attackBot_cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = attackBot_cropped.jpg; sourceTree = "<group>"; };
 		C9A58E521828D5050095E342 /* repairBot_cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = repairBot_cropped.jpg; sourceTree = "<group>"; };
 		C9A58E531828D5050095E342 /* scout_robot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scout_robot.png; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C935F1EF182A2881003256D1 /* MessageUI.framework in Frameworks */,
 				A21C4CDB17D7878600C6C3BB /* UIKit.framework in Frameworks */,
 				A21C4CDD17D7878600C6C3BB /* Foundation.framework in Frameworks */,
 				A21C4CDF17D7878600C6C3BB /* CoreGraphics.framework in Frameworks */,
@@ -99,6 +102,7 @@
 		A21C4CD917D7878600C6C3BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C935F1EE182A2881003256D1 /* MessageUI.framework */,
 				A21C4CDA17D7878600C6C3BB /* UIKit.framework */,
 				A21C4CDC17D7878600C6C3BB /* Foundation.framework */,
 				A21C4CDE17D7878600C6C3BB /* CoreGraphics.framework */,
@@ -312,11 +316,14 @@
 		A21C4CFB17D7878600C6C3BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "baseProject/baseProject-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "baseProject/baseProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -324,11 +331,14 @@
 		A21C4CFC17D7878600C6C3BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "baseProject/baseProject-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "baseProject/baseProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
