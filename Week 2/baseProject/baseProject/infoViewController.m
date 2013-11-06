@@ -50,9 +50,12 @@
 - (IBAction)actionEmailComposer
 {
     if ([MFMailComposeViewController canSendMail])
-    {
+    {//create array to hold the default recipient for emails, in this case my fullsail email address
+        NSArray *recipient =[NSArray arrayWithObjects:@"MLewis0110@fullsail.edu", nil];
         MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
         mailViewController.mailComposeDelegate = self;
+        //set default recipient, as well as the defaults for the other fields.
+        [mailViewController setToRecipients:recipient];
         [mailViewController setSubject:@"Subject Goes Here."];
         [mailViewController setMessageBody:@"Your message goes here." isHTML:NO];
         [self presentModalViewController:mailViewController animated:YES];
