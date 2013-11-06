@@ -78,8 +78,13 @@
 }
 //capture change in value from stepper
 -(IBAction)onChange:(id)sender
-{//reset the calculate button to allow user interaction
-    calculateButton.enabled = YES;
+{//reset the calculate button to allow user interaction (but only after initial robot choice is made)
+    if(currentRobot !=nil)
+    {
+        NSString *temp = outputField.text;
+        NSLog(@"%@",temp);
+        calculateButton.enabled = YES;
+    }
     displayHelper.text = @"Robot to be created:";
     stepControl = (UIStepper*)sender;
     if (stepControl != nil)
