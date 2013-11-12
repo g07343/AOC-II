@@ -31,6 +31,9 @@
     // set observers for keyboard showing and disappearing
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    //disable buttons that aren't needed yet
+    saveButton.enabled = NO;
+    closeKeyboard.enabled = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,10 +49,7 @@
     {
         if (button.tag == 0)
         {
-            //get Date
-            UIDatePicker *picker = (UIDatePicker*)sender;
-            if (picker != nil)
-            {//set value of date picker to dateString var
+            //set value of date picker to dateString var
                 NSDate *date = eventDate.date;
                 //format date
                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -58,12 +58,10 @@
                     [dateFormatter setDateFormat:@"LLL dd, yyyy h:mm:ss aaa"];
                     dateString = [dateFormatter stringFromDate:date];
                 }
-            }
+            
             //capture event title
             NSString *eventTitle = eventName.text;
             NSString *finalString = [[NSString alloc]initWithFormat:@"New Event:  %@ \n%@\n\n", eventTitle, dateString];
-            NSLog(@"%@",finalString);
-            //init class
             [self dismissModalViewControllerAnimated:TRUE];
             
             if (delegate != nil)
@@ -73,23 +71,32 @@
         } else if (button.tag == 1)
         {
             [eventName resignFirstResponder];
+            //only enable save button if there is text in the field
+            if (![eventName.text  isEqual: @""])
+            {
+                saveButton.enabled = YES;
+            }
         }
     }
 }
 //didn't end up using this method of getting the date
 -(IBAction)onChange:(id)sender
-{
-    
+{//get current time and set to Date variable to reset scrollwheel
+    NSDate *now = [[ NSDate alloc ] initWithTimeIntervalSinceNow: (NSTimeInterval) 0 ];
+    //reset scrollwheel to current date if user tries to set it to past
+    if ( [ eventDate.date timeIntervalSinceNow ] < 0 )
+        eventDate.date = now;
 }
-//setup default keyboard observer functions
+//setup default keyboard observer functions and toggle keyboard/save buttons accordingly
 -(void)keyboardWillShow:(NSNotification *)notification
 {
-    
+    saveButton.enabled = NO;
+    closeKeyboard.enabled = YES;
 }
 
 -(void)keyboardWillHide:(NSNotification *)notification
 {
-    
+   closeKeyboard.enabled = NO;
 }
 
 @end

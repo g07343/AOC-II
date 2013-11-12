@@ -19,6 +19,8 @@
     id<EventViewDelegate> delegate;
     IBOutlet UITextField *eventName;
     IBOutlet UIDatePicker *eventDate;
+    IBOutlet UIButton *saveButton;
+    IBOutlet UIButton *closeKeyboard;
     NSString *dateString;
     
 }
