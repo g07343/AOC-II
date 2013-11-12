@@ -51,12 +51,17 @@
             if (picker != nil)
             {//set value of date picker to dateString var
                 NSDate *date = eventDate.date;
-                dateString = [[NSString alloc]initWithFormat:@"%@", [date description]];
-                NSLog(@"%@", dateString);
+                //format date
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                if (dateFormatter != nil)
+                {
+                    [dateFormatter setDateFormat:@"LLL dd, yyyy h:mm:ss aaa"];
+                    dateString = [dateFormatter stringFromDate:date];
+                }
             }
             //capture event title
             NSString *eventTitle = eventName.text;
-            NSString *finalString = [[NSString alloc]initWithFormat:@"New Event:  %@ \n %@", eventTitle, dateString];
+            NSString *finalString = [[NSString alloc]initWithFormat:@"New Event:  %@ \n%@", eventTitle, dateString];
             NSLog(@"%@",finalString);
             //init class
             [self dismissModalViewControllerAnimated:TRUE];
