@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // set observers for keyboard showing and disappearing
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,9 +47,19 @@
         
         } else if (button.tag == 1)
         {
-        
+            [eventName resignFirstResponder];
         }
     }
+}
+
+-(void)keyboardWillShow:(NSNotification *)notification
+{
+    NSLog(@"Keyboard opened!");
+}
+
+-(void)keyboardWillHide:(NSNotification *)notification
+{
+    
 }
 
 @end
