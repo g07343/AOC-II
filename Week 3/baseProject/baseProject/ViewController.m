@@ -19,8 +19,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    firstRun = 0;
     //create app label
     appLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 20.0f, 320.0f, 30.0f)];
+    
     if (appLabel != nil)
     {
         appLabel.text = @"Date Planner";
@@ -53,8 +55,19 @@
 }
 
 -(void)DidClose:(NSString *)eventString
-{
-    textView.text = eventString;
+{//create mutable string to hold final string
+    NSLog(@"String passed was: %@", eventString);
+    if (firstRun == 0)
+    {
+        temp = [[NSMutableString alloc]init];
+        firstRun ++;
+    }
+    
+    if (temp != nil)
+    {
+        [temp appendString:eventString];
+    }
+    textView.text = temp;
 }
 
 

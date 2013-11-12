@@ -14,6 +14,8 @@
     UILabel *appLabel;
     IBOutlet UITextView *textView;
     NSString *eventText;
+    int *firstRun;
+    NSMutableString *temp;
 }
 
 -(IBAction)onClick:(id)sender;

@@ -61,7 +61,7 @@
             }
             //capture event title
             NSString *eventTitle = eventName.text;
-            NSString *finalString = [[NSString alloc]initWithFormat:@"New Event:  %@ \n%@", eventTitle, dateString];
+            NSString *finalString = [[NSString alloc]initWithFormat:@"New Event:  %@ \n%@\n\n", eventTitle, dateString];
             NSLog(@"%@",finalString);
             //init class
             [self dismissModalViewControllerAnimated:TRUE];
@@ -76,7 +76,7 @@
         }
     }
 }
-
+//didn't end up using this method of getting the date
 -(IBAction)onChange:(id)sender
 {
     
