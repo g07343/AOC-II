@@ -18,6 +18,8 @@
 		A21C4CF117D7878600C6C3BB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A21C4CF017D7878600C6C3BB /* Default-568h@2x.png */; };
 		A21C4CF417D7878600C6C3BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A21C4CF317D7878600C6C3BB /* ViewController.m */; };
 		A21C4CF717D7878600C6C3BB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A21C4CF517D7878600C6C3BB /* ViewController.xib */; };
+		C9CE1894183202D100B93486 /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CE1892183202D100B93486 /* AddEventViewController.m */; };
+		C9CE1895183202D100B93486 /* AddEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9CE1893183202D100B93486 /* AddEventViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		A21C4CF217D7878600C6C3BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A21C4CF317D7878600C6C3BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A21C4CF617D7878600C6C3BB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		C9CE1891183202D100B93486 /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
+		C9CE1892183202D100B93486 /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
+		C9CE1893183202D100B93486 /* AddEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEventViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,9 @@
 				A21C4CF317D7878600C6C3BB /* ViewController.m */,
 				A21C4CF517D7878600C6C3BB /* ViewController.xib */,
 				A21C4CE117D7878600C6C3BB /* Supporting Files */,
+				C9CE1891183202D100B93486 /* AddEventViewController.h */,
+				C9CE1892183202D100B93486 /* AddEventViewController.m */,
+				C9CE1893183202D100B93486 /* AddEventViewController.xib */,
 			);
 			path = baseProject;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 				A21C4CEF17D7878600C6C3BB /* Default@2x.png in Resources */,
 				A21C4CF117D7878600C6C3BB /* Default-568h@2x.png in Resources */,
 				A21C4CF717D7878600C6C3BB /* ViewController.xib in Resources */,
+				C9CE1895183202D100B93486 /* AddEventViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A21C4CE717D7878600C6C3BB /* main.m in Sources */,
+				C9CE1894183202D100B93486 /* AddEventViewController.m in Sources */,
 				A21C4CEB17D7878600C6C3BB /* AppDelegate.m in Sources */,
 				A21C4CF417D7878600C6C3BB /* ViewController.m in Sources */,
 			);
@@ -262,6 +272,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "baseProject/baseProject-Prefix.pch";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "baseProject/baseProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -273,6 +284,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "baseProject/baseProject-Prefix.pch";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "baseProject/baseProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
