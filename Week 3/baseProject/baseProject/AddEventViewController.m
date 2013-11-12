@@ -14,6 +14,8 @@
 
 @implementation AddEventViewController
 
+@synthesize delegate;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -44,7 +46,25 @@
     {
         if (button.tag == 0)
         {
-        
+            //get Date
+            UIDatePicker *picker = (UIDatePicker*)sender;
+            if (picker != nil)
+            {//set value of date picker to dateString var
+                NSDate *date = eventDate.date;
+                dateString = [[NSString alloc]initWithFormat:@"%@", [date description]];
+                NSLog(@"%@", dateString);
+            }
+            //capture event title
+            NSString *eventTitle = eventName.text;
+            NSString *finalString = [[NSString alloc]initWithFormat:@"New Event:  %@ \n %@", eventTitle, dateString];
+            NSLog(@"%@",finalString);
+            //init class
+            [self dismissModalViewControllerAnimated:TRUE];
+            
+            if (delegate != nil)
+            {
+                [delegate DidClose:finalString];
+            }
         } else if (button.tag == 1)
         {
             [eventName resignFirstResponder];
@@ -52,9 +72,14 @@
     }
 }
 
+-(IBAction)onChange:(id)sender
+{
+    
+}
+//setup default keyboard observer functions
 -(void)keyboardWillShow:(NSNotification *)notification
 {
-    NSLog(@"Keyboard opened!");
+    
 }
 
 -(void)keyboardWillHide:(NSNotification *)notification

@@ -8,12 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddEventViewController : UIViewController
+@protocol EventViewDelegate <NSObject>
+
+-(void)DidClose:(NSString*)eventString;
+
+@end
+
+@interface AddEventViewController : UIViewController <UITextFieldDelegate>
 {
+    id<EventViewDelegate> delegate;
     IBOutlet UITextField *eventName;
     IBOutlet UIDatePicker *eventDate;
+    NSString *dateString;
+    
 }
 
 -(IBAction)onClick:(id)sender;
 
+-(IBAction)onChange:(id)sender;
+
+@property (strong) id<EventViewDelegate> delegate;
 @end
+

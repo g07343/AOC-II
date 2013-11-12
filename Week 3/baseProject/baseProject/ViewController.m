@@ -14,6 +14,8 @@
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,6 +28,8 @@
         appLabel.textAlignment = UITextAlignmentCenter;
     }
     [self.view addSubview:appLabel];
+    //set up eventText
+    textView.text = eventText;
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,10 +45,17 @@
     {
         AddEventViewController *eventView = [[AddEventViewController alloc]initWithNibName:@"AddEventViewController" bundle:nil];
         if (eventView != nil)
-        {
+        {//set delegate
+            eventView.delegate = self;
             [self presentModalViewController:eventView animated:TRUE];
         }
     }
 }
+
+-(void)DidClose:(NSString *)eventString
+{
+    textView.text = eventString;
+}
+
 
 @end
