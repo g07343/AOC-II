@@ -11,7 +11,11 @@
 @interface ViewController : UIViewController
 {
     IBOutlet UILabel *swipeLabel;
+    IBOutlet UITextView *textView;
     UISwipeGestureRecognizer *rightSwiper;
+    int *firstRun;
+    NSString *temp;
+    NSMutableString *eventString;
 }
 
 -(IBAction)onClick:(id)sender;

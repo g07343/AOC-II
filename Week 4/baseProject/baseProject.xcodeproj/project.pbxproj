@@ -20,7 +20,7 @@
 		A21C4CF717D7878600C6C3BB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A21C4CF517D7878600C6C3BB /* ViewController.xib */; };
 		C9B78DAB183BEE980068C5B9 /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B78DA9183BEE980068C5B9 /* AddEventViewController.m */; };
 		C9B78DAC183BEE980068C5B9 /* AddEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B78DAA183BEE980068C5B9 /* AddEventViewController.xib */; };
-		C9B78DAF183BF9BD0068C5B9 /* EventSaved.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B78DAE183BF9BD0068C5B9 /* EventSaved.m */; };
+		C9B78DB2183BFB460068C5B9 /* SavedEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B78DB1183BFB460068C5B9 /* SavedEvents.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +43,8 @@
 		C9B78DA8183BEE980068C5B9 /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
 		C9B78DA9183BEE980068C5B9 /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
 		C9B78DAA183BEE980068C5B9 /* AddEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEventViewController.xib; sourceTree = "<group>"; };
-		C9B78DAD183BF9BD0068C5B9 /* EventSaved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSaved.h; sourceTree = "<group>"; };
-		C9B78DAE183BF9BD0068C5B9 /* EventSaved.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSaved.m; sourceTree = "<group>"; };
+		C9B78DB0183BFB460068C5B9 /* SavedEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedEvents.h; sourceTree = "<group>"; };
+		C9B78DB1183BFB460068C5B9 /* SavedEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedEvents.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 				C9B78DA9183BEE980068C5B9 /* AddEventViewController.m */,
 				C9B78DAA183BEE980068C5B9 /* AddEventViewController.xib */,
 				A21C4CE117D7878600C6C3BB /* Supporting Files */,
-				C9B78DAD183BF9BD0068C5B9 /* EventSaved.h */,
-				C9B78DAE183BF9BD0068C5B9 /* EventSaved.m */,
+				C9B78DB0183BFB460068C5B9 /* SavedEvents.h */,
+				C9B78DB1183BFB460068C5B9 /* SavedEvents.m */,
 			);
 			path = baseProject;
 			sourceTree = "<group>";
@@ -187,10 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B78DB2183BFB460068C5B9 /* SavedEvents.m in Sources */,
 				A21C4CE717D7878600C6C3BB /* main.m in Sources */,
 				C9B78DAB183BEE980068C5B9 /* AddEventViewController.m in Sources */,
 				A21C4CEB17D7878600C6C3BB /* AppDelegate.m in Sources */,
-				C9B78DAF183BF9BD0068C5B9 /* EventSaved.m in Sources */,
 				A21C4CF417D7878600C6C3BB /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

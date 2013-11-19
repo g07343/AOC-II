@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "AddEventViewController.h"
-
+#import "SavedEvents.h"
 @interface ViewController ()
 
 @end
@@ -18,6 +18,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //retrieve any saved events upon load and set to string
+    temp = [[SavedEvents GetInstance]getEvent];
+    
+    //append loaded string to mutablestring
+    [eventString appendString:temp];
+    
 	rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
     rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
     [swipeLabel addGestureRecognizer:rightSwiper];
@@ -42,8 +49,8 @@
 }
 
 -(IBAction)onClick:(id)sender
-{
-
+{//save out any additional events
+    [[SavedEvents GetInstance]setEvent];
 }
 
 @end

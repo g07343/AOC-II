@@ -11,6 +11,12 @@
 @interface AddEventViewController : UIViewController
 {
     IBOutlet UILabel *swipeLabel;
+    IBOutlet UITextField *eventName;
+    IBOutlet UIDatePicker *eventDate;
+    IBOutlet UIButton *closeKeyboard;
     UISwipeGestureRecognizer *leftSwiper;
 }
+
+-(IBAction)onClick:(id)sender;
+
 @end

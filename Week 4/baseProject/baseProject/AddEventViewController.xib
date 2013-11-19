@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddEventViewController">
             <connections>
+                <outlet property="closeKeyboard" destination="dfM-SX-kmr" id="oMP-bN-vlI"/>
+                <outlet property="eventDate" destination="fy5-ON-vsW" id="y6V-R8-dTI"/>
+                <outlet property="eventName" destination="7fk-hm-5gF" id="bbR-B3-0nD"/>
                 <outlet property="swipeLabel" destination="IcX-Hs-LFM" id="H4d-ce-iBO"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -42,6 +45,9 @@
                     <state key="normal" title="Close Keyboard">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="onClick:" destination="-1" eventType="touchUpInside" id="J1G-em-cWr"/>
+                    </connections>
                 </button>
                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fy5-ON-vsW">
                     <rect key="frame" x="0.0" y="273" width="320" height="162"/>
