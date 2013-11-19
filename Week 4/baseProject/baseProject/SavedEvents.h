@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface SavedEvents : NSObject
-
+{
+    NSString *eventString;
+}
 +(SavedEvents*)GetInstance;
 -(void)getData;
 -(void)setEvent;
--(NSString*)getEvent;
+-(void)holdData:(NSString*)event;
+-(NSString*) getEvent;
 
 @end

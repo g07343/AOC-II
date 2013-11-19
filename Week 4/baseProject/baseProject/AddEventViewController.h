@@ -15,8 +15,10 @@
     IBOutlet UIDatePicker *eventDate;
     IBOutlet UIButton *closeKeyboard;
     UISwipeGestureRecognizer *leftSwiper;
+    NSString *dateString;
 }
 
 -(IBAction)onClick:(id)sender;
+-(IBAction)onChange:(id)sender;
 
 @end

@@ -19,11 +19,16 @@
 {
     [super viewDidLoad];
     
-    //retrieve any saved events upon load and set to string
-    temp = [[SavedEvents GetInstance]getEvent];
+    eventString = [[NSMutableString alloc] initWithString:@""];
     
-    //append loaded string to mutablestring
-    [eventString appendString:temp];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (defaults != nil)
+    {
+        NSString *saved = [defaults objectForKey:@"events"];
+        [eventString appendString:saved];
+        textView.text = saved;
+        NSLog(@"Save data found: %@",saved);
+    }
     
 	rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
     rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
@@ -48,9 +53,36 @@
     }
 }
 
+//add back in the 'viewDidAppear' default method to refresh data everytime main view appears
+-(void)viewDidAppear:(BOOL)animated
+{
+    NSString *addedEvent = [[SavedEvents GetInstance] getEvent];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (defaults != nil)
+    {
+        NSString *savedEvents = [defaults objectForKey:@"events"];
+        
+        if (addedEvent != nil)
+        {
+            [eventString appendString:addedEvent];
+        }
+        
+        textView.text = eventString;
+    }
+}
+
 -(IBAction)onClick:(id)sender
 {//save out any additional events
-    [[SavedEvents GetInstance]setEvent];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (defaults != nil)
+    {
+        temp = textView.text;
+        //set the data for defaults
+        [defaults setObject:temp forKey:@"events"];
+        
+        //save data
+        [defaults synchronize];
+    }
 }
 
 @end

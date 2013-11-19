@@ -7,7 +7,7 @@
 //
 
 #import "SavedEvents.h"
-
+#import "AddEventViewController.h"
 @implementation SavedEvents
 
 static SavedEvents *_instance = nil;
@@ -44,14 +44,22 @@ static SavedEvents *_instance = nil;
 
 -(void)setEvent
 {
-
+    
 }
 
 -(NSString*) getEvent
 {
-    NSString *temp = @"";
-    
-    return temp;
+    if (eventString != nil)
+    {
+        return eventString;
+    }
+    return nil;
+}
+
+-(void)holdData:(NSString*)event
+{
+    eventString = event;
+    NSLog(@"%@", eventString);
 }
 
 @end
