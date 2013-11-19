@@ -8,30 +8,19 @@
 
 #import "ViewController.h"
 #import "AddEventViewController.h"
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    firstRun = 0;
-    //create app label
-    appLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 20.0f, 320.0f, 30.0f)];
-    
-    if (appLabel != nil)
-    {
-        appLabel.text = @"Date Planner";
-        appLabel.backgroundColor = [UIColor whiteColor];
-        appLabel.textAlignment = UITextAlignmentCenter;
-    }
-    [self.view addSubview:appLabel];
-    //set up eventText
-    textView.text = eventText;
+	rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
+    rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
+    [swipeLabel addGestureRecognizer:rightSwiper];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,36 +28,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//create onClick function to handle the addEvent button
--(IBAction)onClick:(id)sender
+
+-(void)onSwipe:(UISwipeGestureRecognizer*)recognizer
 {
-    UIButton *button = (UIButton*)sender;
-    if (button != nil)
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionRight)
     {
         AddEventViewController *eventView = [[AddEventViewController alloc]initWithNibName:@"AddEventViewController" bundle:nil];
         if (eventView != nil)
-        {//set delegate
-            eventView.delegate = self;
-            [self presentModalViewController:eventView animated:TRUE];
+        {
+            [self presentModalViewController:eventView animated:true];
         }
     }
 }
 
--(void)DidClose:(NSString *)eventString
-{//create mutable string to hold final string
-    NSLog(@"String passed was: %@", eventString);
-    if (firstRun == 0)
-    {
-        temp = [[NSMutableString alloc]init];
-        firstRun ++;
-    }
-    
-    if (temp != nil)
-    {
-        [temp appendString:eventString];
-    }
-    textView.text = temp;
-}
+-(IBAction)onClick:(id)sender
+{
 
+}
 
 @end

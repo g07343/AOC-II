@@ -7,15 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AddEventViewController.h"
 
-@interface ViewController : UIViewController <EventViewDelegate>
+@interface ViewController : UIViewController
 {
-    UILabel *appLabel;
-    IBOutlet UITextView *textView;
-    NSString *eventText;
-    int *firstRun;
-    NSMutableString *temp;
+    IBOutlet UILabel *swipeLabel;
+    UISwipeGestureRecognizer *rightSwiper;
 }
 
 -(IBAction)onClick:(id)sender;

@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>740E5DE5-3A86-4C4E-A66B-A63B5FD306EC</string>
+	<string>7CDF5953-94B3-4F71-A2CC-E1317C3ED1B7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>baseProject</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,7 +14,7 @@
 		<string>https://github.com/g07343/AOC-II.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Week 3/baseProject/baseProject.xcodeproj/project.xcworkspace</string>
+	<string>Week 4/baseProject/baseProject.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6C7E450F-F246-4B45-AF4D-2764082B2073</key>

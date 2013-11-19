@@ -2,33 +2,15 @@
 //  AddEventViewController.h
 //  baseProject
 //
-//  Created by Matthew Lewis on 11/12/13.
+//  Created by Matthew Lewis on 11/19/13.
 //  Copyright (c) 2013 FullSail. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@protocol EventViewDelegate <NSObject>
-
--(void)DidClose:(NSString*)eventString;
-
-@end
-
-@interface AddEventViewController : UIViewController <UITextFieldDelegate>
+@interface AddEventViewController : UIViewController
 {
-    id<EventViewDelegate> delegate;
-    IBOutlet UITextField *eventName;
-    IBOutlet UIDatePicker *eventDate;
-    IBOutlet UIButton *saveButton;
-    IBOutlet UIButton *closeKeyboard;
-    NSString *dateString;
-    
+    IBOutlet UILabel *swipeLabel;
+    UISwipeGestureRecognizer *leftSwiper;
 }
-
--(IBAction)onClick:(id)sender;
-
--(IBAction)onChange:(id)sender;
-
-@property (strong) id<EventViewDelegate> delegate;
 @end
-
