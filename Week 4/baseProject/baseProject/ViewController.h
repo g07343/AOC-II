@@ -12,6 +12,7 @@
 {
     IBOutlet UILabel *swipeLabel;
     IBOutlet UITextView *textView;
+    IBOutlet UIButton *save;
     UISwipeGestureRecognizer *rightSwiper;
     int *firstRun;
     NSString *temp;

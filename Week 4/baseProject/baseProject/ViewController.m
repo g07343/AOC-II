@@ -18,16 +18,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    //alloc mutable string upon first load
     eventString = [[NSMutableString alloc] initWithString:@""];
     
+    //disable save button initially and set firstRun variable
+    save.enabled = false;
+    firstRun = 0;
+    
+    //load defaults that were previously saved, if any
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (defaults != nil)
     {
         NSString *saved = [defaults objectForKey:@"events"];
-        [eventString appendString:saved];
-        textView.text = saved;
-        NSLog(@"Save data found: %@",saved);
+        //make sure the object is not nil (if nil crashes program)
+        if (saved != nil)
+        {
+            [eventString appendString:saved];
+            textView.text = saved;
+            NSLog(@"Save data found: %@",saved);
+        }
     }
     
 	rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
@@ -60,11 +69,10 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (defaults != nil)
     {
-        NSString *savedEvents = [defaults objectForKey:@"events"];
-        
         if (addedEvent != nil)
         {
             [eventString appendString:addedEvent];
+            save.enabled = true;
         }
         
         textView.text = eventString;
@@ -82,6 +90,7 @@
         
         //save data
         [defaults synchronize];
+        save.enabled = false;
     }
 }
 
