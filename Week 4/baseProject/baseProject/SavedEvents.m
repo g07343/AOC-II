@@ -36,16 +36,6 @@ static SavedEvents *_instance = nil;
     return self;
 }
 
--(void)getData
-{
-    //responsible for retrieving event data from date picker and text field.
-    NSLog(@"getEvent run from singleton!");
-}
-
--(void)setEvent
-{
-    
-}
 
 -(NSString*) getEvent
 {

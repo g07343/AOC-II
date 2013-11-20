@@ -13,8 +13,6 @@
     NSString *eventString;
 }
 +(SavedEvents*)GetInstance;
--(void)getData;
--(void)setEvent;
 -(void)holdData:(NSString*)event;
 -(NSString*) getEvent;
 
